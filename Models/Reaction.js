@@ -2,9 +2,9 @@ const mongoose = require("mongoose");
 const dateFormat = require("../utils/dateFormat");
 const { schema } = require("./user");
 
-const reactionSchema = new Schema({
+const reactionSchema = new mongoose.Schema({
   reactionId: {
-    type: Schema.Types.ObjectId,
+    type: mongoose.Schema.Types.ObjectId,
     default: () => new Types.ObjectId(),
   },
   reactionBody: {

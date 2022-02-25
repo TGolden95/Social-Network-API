@@ -3,7 +3,7 @@ const dateFormat = require("../utils/dateFormat");
 const reactionSchema = require("./Reaction");
 const { schema } = require("./user");
 
-const thoughtSchema = new Schema({
+const thoughtSchema = new mongoose.Schema({
   thoughtText: {
     type: Strring,
     required: true,
