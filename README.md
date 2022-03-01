@@ -15,9 +15,9 @@ This project is a social media back-end API. It allows users to share their thou
 
 # Languages used in this
 
-MongoDB
-Mongoose
-Express.js
+MongoDB,
+Mongoose,
+Express.js,
 Node.js
 
 # How to start app
