@@ -1,11 +1,10 @@
 const mongoose = require("mongoose");
 const dateFormat = require("../utils/dateFormat");
 const reactionSchema = require("./Reaction");
-const { schema } = require("./user");
 
 const thoughtSchema = new mongoose.Schema({
   thoughtText: {
-    type: Strring,
+    type: String,
     required: true,
     validate: [
       ({ length }) => length > 0 && length <= 280,
@@ -28,6 +27,6 @@ thoughtSchema.virtual("reactionCount").get(function () {
   return this.reactions.length;
 });
 
-const thought = model("thought", thoughtSchema);
+const Thought = mongoose.model("Thought", thoughtSchema);
 
-moduole.exports = thought;
+module.exports = Thought;

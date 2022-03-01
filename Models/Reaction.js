@@ -1,6 +1,5 @@
 const mongoose = require("mongoose");
 const dateFormat = require("../utils/dateFormat");
-const { schema } = require("./user");
 
 const reactionSchema = new mongoose.Schema({
   reactionId: {

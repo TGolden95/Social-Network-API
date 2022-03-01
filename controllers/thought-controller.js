@@ -1,6 +1,6 @@
 const { del } = require("express/lib/application");
 const Thought = require("../Models/Thought");
-const User = require("../Models/user");
+const User = require("../Models/User");
 
 const getThoughts = async (req, res) => {
   const thought = await Thought.find(req.params.id);
