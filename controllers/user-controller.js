@@ -42,7 +42,6 @@ const addFriend = async (req, res) => {
 const deleteFriend = async (req, res) => {
   const delFriend = await User.findOneAndUpdate(
     req.params.id,
-    req.params.id,
     { $pull: { friends: req.params.friendId } },
     { new: true }
   );

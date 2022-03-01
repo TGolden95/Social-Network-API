@@ -32,10 +32,30 @@ const deleteThought = async (req, res) => {
   res.json(delThought);
 };
 
+const addReaction = async (req, res) => {
+  const newReaction = await User.findOneAndUpdate(
+    req.params.id,
+    { $addToSet: { reactions: req.params.reactionId } },
+    { new: true }
+  );
+  res.json(newReaction);
+};
+
+const deleteReaction = async (req, res) => {
+  const delReaction = await User.findOneAndUpdate(
+    req.params.id,
+    { $pull: { reactions: req.params.reactionId } },
+    { new: true }
+  );
+  res.json(delReaction);
+};
+
 module.exports = {
   getThoughts,
   createThought,
   getThoughtById,
   updateThought,
   deleteThought,
+  addReaction,
+  deleteReaction,
 };
